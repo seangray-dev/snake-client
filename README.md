@@ -14,3 +14,14 @@ Before you can run this client, you will need to be running the server side whic
 
 - Follow steps inside the snek server repo to run the server side
 - Run the development snake client using the `node play.js` command.
+
+## To Play
+
+- Use "WASD" on your keyboard to move the snake:
+
+  - W: moves up
+  - A: moves left
+  - S: moves down
+  - D: moves down
+
+- Use "E, M, N, or Y" to trigger a special message
