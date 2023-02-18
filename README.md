@@ -8,7 +8,7 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Final Product
 
-![Snake Demo](./assets/snake_demo.mp4)
+![Snake Demo](./assets/snake_demo.gif)
 
 ## Getting Started
 
