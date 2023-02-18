@@ -1,3 +1,4 @@
+const { movementCommands, specialMessage } = require("./constants");
 // Stores the active TCP connection object.
 let connection;
 
@@ -13,29 +14,13 @@ const setupInput = function (conn) {
     // check for ctrl + c input
     if (key === "\u0003") {
       process.exit();
-    } else if (key === "w") {
-      // send "Move: up" message to the server
-      connection.write("Move: up");
-      // send "Move: left" message to the server
-    } else if (key === "a") {
-      connection.write("Move: left");
-      // send "Move: down" message to the server
-    } else if (key === "s") {
-      connection.write("Move: down");
-      // send "Move: right" message to the server
-    } else if (key === "d") {
-      connection.write("Move: right");
+    } else if (key in movementCommands) {
+      connection.write(movementCommands[key]);
     }
 
     // send special message
-    if (key === "m") {
-      connection.write("Say: monkeys");
-    } else if (key === "n") {
-      connection.write("Say: nooo");
-    } else if (key === "y") {
-      connection.write("Say: yeah");
-    } else if (key === "e") {
-      connection.write("Say: sssss");
+    if (key in specialMessage) {
+      connection.write(specialMessage[key]);
     }
   };
 
