@@ -14,16 +14,20 @@ const setupInput = function (conn) {
     if (key === "\u0003") {
       process.exit();
     } else if (key === "w") {
-      connection.write("Move: up"); // send "Move: up" message to the server
+      // send "Move: up" message to the server
+      connection.write("Move: up");
+      // send "Move: left" message to the server
     } else if (key === "a") {
-      connection.write("Move: left"); // send "Move: left" message to the server
+      connection.write("Move: left");
+      // send "Move: down" message to the server
     } else if (key === "s") {
-      connection.write("Move: down"); // send "Move: down" message to the server
+      connection.write("Move: down");
+      // send "Move: right" message to the server
     } else if (key === "d") {
-      connection.write("Move: right"); // send "Move: right" message to the server
+      connection.write("Move: right");
     }
 
-    // send message
+    // send special message
     if (key === "m") {
       connection.write("Say: monkeys");
     } else if (key === "n") {
